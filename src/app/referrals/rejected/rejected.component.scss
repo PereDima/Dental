@@ -1,0 +1,199 @@
+$main-blue: #034971;
+$blue-2: #2f8bb2;
+$note: #ffeecd;
+$container-background: #0349711a;
+$active-tab: #03497180;
+$padding2rem: 0 2rem;
+
+h2 {
+  color: $main-blue;
+  font-size: 20px;
+}
+
+a {
+  color: $blue-2;
+}
+
+.blue-line {
+  border-bottom: 1px solid $blue-2;
+  margin: 0 0 2rem 0;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 4rem;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.main-btn {
+  background: $main-blue;
+  color: #fff;
+}
+
+.second-btn {
+  background: #fff;
+  color: $main-blue;
+  border: 1px $main-blue solid;
+
+  svg {
+    display: flex;
+    fill: $main-blue;
+  }
+}
+
+.small-btn-container {
+  align-self: end;
+  padding-right: calc(65vw / 8);
+
+  .small-btn {
+    padding: 2px 15px;
+    font-size: 11px;
+    align-self: flex-end;
+  }
+}
+
+.container {
+  background: #fff;
+  display: flex;
+  // margin: 0rem 3rem;
+  align-items: stretch;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+
+  hr {
+    margin: 1rem 0 2rem 0;
+  }
+
+
+  .head {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 2rem;
+
+
+    .text {
+      display: flex;
+      align-items: center;
+      margin-left: 30vw;
+
+      p {
+        font-size: 24px;
+        margin: 0;
+      }
+    }
+  }
+
+  .main-info {
+    display: flex;
+
+    &::after {
+      content: "";
+      border-right: 1px solid $blue-2;
+      margin: 0 -50% 0;
+    }
+
+    .patient-info {
+      .bold-cell {
+        font-weight: bold;
+      }
+
+      .mat-row .mat-cell {
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        padding-left: 0;
+      }
+
+      ::ng-deeptd.mat-cell:last-of-type {
+        padding-right: 0;
+      }
+
+      ::ng-deep .mat-elevation-z1 {
+        margin-top: -60px;
+        box-shadow: none;
+        width: 45vw;
+        margin-right: 3rem;
+      }
+    }
+
+    .referral-status {
+      max-width: calc(100vw - 45vw);
+
+      .referral-history {
+        display: flex;
+        flex-direction: column;
+        width: 35vw;
+
+        &::after {
+          content: "";
+          border-bottom: 1px solid $blue-2;
+          margin: 1rem 0 2rem;
+        }
+
+        .row-container {
+          display: flex;
+
+          .first-elem {
+            font-weight: bold;
+            align-self: flex-start;
+            min-width: 180px;
+            display: inline-block;
+          }
+
+          .last-info {
+            &::after {
+              content: "current status";
+              margin: 0 0 0 10px;
+              padding: 5px 9px;
+              font-size: 10px;
+              font-weight: normal;
+              background: $note;
+            }
+          }
+
+          .second-item {
+            display: inline-block;
+          }
+        }
+      }
+
+      .attachments {
+        padding-bottom: 1rem;
+        width: 100%;
+
+        .last {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .letters {
+        .last-info {
+          &::after {
+            content: "latest rejection letter";
+            margin: 0 0 0 10px;
+            padding: 5px 9px;
+            font-size: 10px;
+            font-weight: normal;
+            background: $note;
+          }
+        }
+      }
+    }
+  }
+
+  .btns-container {
+    margin: 3rem 0;
+    display: flex;
+    justify-content: center;
+
+    .btn-container {
+      margin-right: 24px;
+    }
+  }
+}

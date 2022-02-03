@@ -1,0 +1,126 @@
+$main-blue: #034971;
+$blue-2: #2f8bb2;
+$note: #ffeecd;
+$container-background: #0349711a;
+$active-tab: #03497180;
+$padding2rem: 0 2rem;
+
+
+.btn {
+  text-decoration: none;
+  border-radius: 4rem;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.main-btn {
+  background: $main-blue;
+  color: #fff;
+  margin: 0.8rem 2rem 0.9rem;
+  align-self: flex-start;
+  z-index: 2;
+}
+
+.second-btn {
+  background: #fff;
+  color: $main-blue;
+  border: 1px $main-blue solid;
+
+  svg {
+    display: flex;
+    fill: $main-blue;
+  }
+}
+
+.header-container {
+  border-radius: 8px 8px 0px 0px;
+
+  .header {
+    background: $container-background;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem 0;
+
+    .header-text {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 44px;
+      margin-bottom: 0;
+    }
+
+    .search-form {
+      .mat-form-field {
+        width: 315px;
+      }
+
+      ::ng-deep .mat-form-field-appearance-legacy .mat-form-field-underline {
+        background-color: $main-blue;
+        width: 315px;
+      }
+
+      mat-icon {
+        svg {
+          fill: $main-blue;
+        }
+      }
+    }
+  }
+
+  mat-tab-group {
+    ::ng-deep.mat-tab-labels {
+      padding-top: 1rem;
+    }
+
+    ::ng-deep.mat-tab-header {
+      background: $container-background;
+      padding-left: 2rem;
+      border-bottom: none;
+    }
+
+    ::ng-deep.mat-tab-label {
+      opacity: 1;
+      min-width: 50px;
+      padding: $padding2rem 0 0;
+    }
+
+    ::ng-deep.mat-ink-bar {
+      background: transparent;
+    }
+
+    ::ng-deep.mat-tab-label-active {
+      .mat-tab-label-content {
+        background-color: $active-tab;
+        padding: 1px 5px;
+        border-radius: 4px;
+        color: #fff;
+      }
+    }
+
+    ::ng-deep.mat-tab-body-content {
+      width: 100vw;
+    }
+    
+  }
+
+  .tab-section {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn-container {
+      display: block;
+      position: absolute;
+      align-self: flex-start;
+      width: 100%;
+      display: flex;
+      justify-content: end;
+    }
+  }
+}
